@@ -31,6 +31,8 @@ def test_fill_form(setup_browser):
     #Выбор Subjects
     with allure.step("Выбор предмета"):
         browser.element('#subjectsInput').should(be.visible).type('Maths').press_enter()
+    #Скролл браузера
+    browser.execute_script('window.scrollBy(0, 550)')
     #Выбор хобби
     with allure.step("Выбор хобби"):
         browser.element('label[for ="hobbies-checkbox-1"]').click()
