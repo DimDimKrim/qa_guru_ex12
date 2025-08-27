@@ -57,6 +57,7 @@ def test_fill_form(setup_browser):
     with allure.step("Проверка отправки формы"):
         browser.element('[id="example-modal-sizes-title-lg"]').should(be.visible).should(have.text('Thanks for submitting the form'))
 
+
 def test_successfully_filling(setup_browser):
     with allure.step("Проверка формы"):
         test_fill_form(setup_browser)
